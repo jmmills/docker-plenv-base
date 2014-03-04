@@ -44,7 +44,7 @@ If there is a tagged version in my docker index?
 $ docker pull jmmills/plenv:5.18.2
 ```
 
-I may in the near future attempt to interate through the available version from plenv.
+I may in the near future attempt to interate through the available versions from plenv.
 Until then perhaps you would like to build your own? Or, maybe spin up a non-maint version for testing
 
 ```
@@ -66,7 +66,7 @@ $
 What is this for?
 =================
 
-Mostly? Mostly for me. Maybe it could be for you?
+Honestly? Mostly for me. Maybe it could be for you?
 You can use this to test module dependancy pull-in from CPAN, or build a perl development and/or integration and/or testing environment around it.
 I'm not quite sure what it will be good for yet, other than allowing me to quickly pull down a copy of the latest stable perl in a runnable environment rather quickly.
 
