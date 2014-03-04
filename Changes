@@ -1,0 +1,4 @@
+Mar 4th 2012
+    * Set up initial repository
+    * Created base branch (where perl doesn't build automatically)
+    * Roughed out Readme.md
