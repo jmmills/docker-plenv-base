@@ -48,8 +48,8 @@ I may in the near future attempt to interate through the available versions from
 Until then perhaps you would like to build your own? Or, maybe spin up a non-maint version for testing
 
 ```
-$ docker pull jmmills/plenv:base
-$ CONTAINER_ID=$( docker run -d jmmills/plenv:base sh -c 'plenv install 5.17.2 && plenv global 5.17.2' ) \
+$ docker pull jmmills/plenv-base
+$ CONTAINER_ID=$( docker run -d jmmills/plenv-base sh -c 'plenv install 5.17.2 && plenv global 5.17.2' ) \
                && docker attach $CONTAINER_ID \
                && docker commit $CONTAINER_ID my_perl_build:5.17.2
 $ docker run -t -i my_perl_build:5.17.2 /bin/bash -l
