@@ -19,6 +19,6 @@ RUN plenv install-cpanm
 
 ADD plenv-install_latest /usr/share/plenv/libexec/
 
-RUN plenv install_latest
+#RUN plenv install_latest
 
 CMD ["/bin/bash", "-l"]
