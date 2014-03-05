@@ -17,4 +17,8 @@ RUN git clone git://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-bu
 ADD plenv_profile.sh /etc/profile.d/plenv.sh
 RUN plenv install-cpanm
 
+ADD plenv-install_latest /usr/share/plenv/libexec/
+
+RUN plenv install_latest
+
 CMD ["/bin/bash", "-l"]
