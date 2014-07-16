@@ -1,5 +1,3 @@
-# VERISON 0.99.0
-
 FROM ubuntu:latest
 MAINTAINER = Jason M. Mills <jmmills@cpan.org>
 
@@ -18,7 +16,5 @@ ADD plenv_profile.sh /etc/profile.d/plenv.sh
 RUN plenv install-cpanm
 
 ADD plenv-install_latest /usr/share/plenv/libexec/
-
-#RUN plenv install_latest
 
 CMD ["/bin/bash", "-l"]
