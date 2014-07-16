@@ -13,8 +13,8 @@ RUN git clone git://github.com/tokuhirom/plenv.git /usr/share/plenv
 RUN git clone git://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build
 
 ADD plenv_profile.sh /etc/profile.d/plenv.sh
-RUN plenv install-cpanm
-
 ADD plenv-install_latest /usr/share/plenv/libexec/
+
+ONBUILD plenv install-cpanm
 
 CMD ["/bin/bash", "-l"]
