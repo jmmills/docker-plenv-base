@@ -14,6 +14,4 @@ ENV PATH ${PATH}:/usr/share/plenv/bin
 ADD plenv_profile.sh /etc/profile.d/plenv.sh
 ADD plenv-latest_version /usr/share/plenv/libexec/
 
-ONBUILD plenv install-cpanm
-
 CMD ["/bin/bash", "-l"]
