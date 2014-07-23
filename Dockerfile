@@ -1,19 +1,18 @@
 FROM ubuntu:latest
 MAINTAINER = Jason M. Mills <jmmills@cpan.org>
 
-ENV PATH $PATH:/usr/share/plenv/bin
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo deb http://archive.ubuntu.com/ubuntu precise main universe >/etc/apt/sources.list
 RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y git build-essential curl
+RUN apt-get install -y build-essential
+RUN apt-get install -y git curl
 
 RUN git clone git://github.com/tokuhirom/plenv.git /usr/share/plenv
 RUN git clone git://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build
+ENV PATH ${PATH}:/usr/share/plenv/bin
 
 ADD plenv_profile.sh /etc/profile.d/plenv.sh
-ADD plenv-install_latest /usr/share/plenv/libexec/
+ADD plenv-latest_version /usr/share/plenv/libexec/
 
 ONBUILD plenv install-cpanm
 
